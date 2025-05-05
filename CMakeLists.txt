@@ -32,8 +32,16 @@ set(CMAKE_VERBOSE_MAKEFILE ON)
 # Add library directory
 link_directories(${CMAKE_SOURCE_DIR}/lib)
 
-# Link pdcurses library
-# target_link_libraries(main PRIVATE pdcurses) uncomment and add library
+# Install fplus
+include(FetchContent)
+FetchContent_Declare(
+    functional_plus
+    GIT_REPOSITORY https://github.com/Dobiasd/FunctionalPlus.git
+    GIT_TAG master
+)
+FetchContent_MakeAvailable(functional_plus)
+target_compile_features(main PRIVATE cxx_std_14)
+target_link_libraries(main PRIVATE FunctionalPlus::fplus)
 
 # Custom target to generate .clang_complete (optional)
 add_custom_target(
