@@ -1,10 +1,3 @@
-#include "main.hpp"
+#include "functional.hpp"
 
-void hello() {
-    std::cout << "Hello, World!" << std::endl;
-}
-
-int main() {
-    hello();
-    return EXIT_SUCCESS;
-}
+int main() { return EXIT_SUCCESS; }
