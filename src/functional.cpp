@@ -1,10 +1,5 @@
 #include "functional.hpp"
 
-#include <functional>
-#include <vector>
-
-typedef std::vector<int> Container;
-
 bool isEven(int x) {
   if (x % 2 == 0) {
     return true;
@@ -13,7 +8,7 @@ bool isEven(int x) {
   return false;
 }
 
-Container keepIf(const std::function<bool(int x)> &fn, Container &container) {
+Container keepIf(const std::function<bool(int)> &fn, Container &container) {
   Container subContainer;
 
   for (auto c : container) {
