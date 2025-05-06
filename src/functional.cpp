@@ -1,6 +1,6 @@
 #include "functional.hpp"
 
-bool isEven(int x) {
+bool isEven(const int x) {
   if (x % 2 == 0) {
     return true;
   }
@@ -8,10 +8,11 @@ bool isEven(int x) {
   return false;
 }
 
-Container keepIf(const std::function<bool(int)> &fn, Container &container) {
+Container keepIf(const std::function<bool(int)> &fn,
+                 const Container &container) {
   Container subContainer;
 
-  for (auto c : container) {
+  for (const auto c : container) {
     if (fn(c)) {
       subContainer.push_back(c);
     }
