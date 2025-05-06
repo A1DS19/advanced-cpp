@@ -8,4 +8,4 @@
 using Container = std::vector<int>;
 
 bool isEven(int x);
-Container keepIf(const std::function<bool(int x)> &fn, Container &container);
+Container keepIf(const std::function<bool(int)> &fn, Container &container);
