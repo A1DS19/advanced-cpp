@@ -2,7 +2,8 @@
 
 #include <fplus/fplus.hpp>
 #include <functional>
-#include <vector>
+
+#include "common.hpp"
 
 // typedef std::vector<int> Container; old style
 using Container = std::vector<int>;
