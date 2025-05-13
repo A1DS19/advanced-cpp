@@ -3,7 +3,7 @@
 #include <cctype>
 #include <string>
 
-std::string empty = "qwe";
+const std::string empty = "qwe";
 const auto subEmpty = empty.substr(0, 1);
 
 bool search_string(std::string value, std::string search_term) {
