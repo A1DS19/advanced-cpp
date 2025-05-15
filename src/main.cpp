@@ -1,5 +1,7 @@
 #include <stdlib.h>
 
+#include <utility>
+
 #include "algorithm.hpp"
 #include "common.hpp"
 #include "functional.hpp"
@@ -25,6 +27,14 @@ int main() {
   std::string value = "jose";
   reverse_string(value);
   std::cout << value << std::endl;
+
+  student_map students;
+  students.insert({"jose", 24});
+  students.insert(std::make_pair("mario lizano", 45));
+  students.insert_or_assign("jose", 30);
+  for (const auto &[student, age] : students) {
+    std::cout << student << " " << age << std::endl;
+  }
 
   return EXIT_SUCCESS;
 }
