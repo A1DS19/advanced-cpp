@@ -22,5 +22,9 @@ int main() {
     std::cout << str << std::endl;
   }
 
+  std::string value = "jose";
+  reverse_string(value);
+  std::cout << value << std::endl;
+
   return EXIT_SUCCESS;
 }
