@@ -5,6 +5,7 @@
 #include "algorithm.hpp"
 #include "common.hpp"
 #include "functional.hpp"
+#include "polimorphism_inheritance.hpp"
 #include "strings.hpp"
 
 int main() {
@@ -35,6 +36,9 @@ int main() {
   for (const auto &[student, age] : students) {
     std::cout << student << " " << age << std::endl;
   }
+
+  TestOne test_one;
+  test_one.print_test_one();
 
   return EXIT_SUCCESS;
 }
