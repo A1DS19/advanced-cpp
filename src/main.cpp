@@ -4,6 +4,7 @@
 
 #include "algorithm.hpp"
 #include "common.hpp"
+#include "error_handling.hpp"
 #include "functional.hpp"
 #include "polimorphism_inheritance.hpp"
 #include "strings.hpp"
@@ -39,6 +40,14 @@ int main() {
 
   TestOne test_one;
   test_one.print_test_one();
+
+  try {
+    throw_execption_two();
+  } catch (const std::exception &e) {
+    std::cout << "exception thrown and handled" << " " << e.what() << std::endl;
+  }
+
+  throw_execption();
 
   return EXIT_SUCCESS;
 }
