@@ -47,7 +47,13 @@ int main() {
     std::cout << "exception thrown and handled" << " " << e.what() << std::endl;
   }
 
-  throw_execption();
+  try {
+    throw_execption();
+  } catch (const std::out_of_range &e) {
+    std::cout << "out of range:" << e.what() << std::endl;
+  } catch (const std::exception &e) {
+    std::cout << "exception:" << e.what() << std::endl;
+  }
 
   return EXIT_SUCCESS;
 }

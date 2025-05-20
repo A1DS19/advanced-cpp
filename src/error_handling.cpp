@@ -3,14 +3,11 @@
 #include <iostream>
 #include <vector>
 
+// Catch only if you can handle or enrich the error. Otherwise, let it fly.
 void throw_execption() {
   std::vector<int> vec;
 
-  try {
-    std::cout << vec[100] << std::endl;
-  } catch (const std::exception &e) {
-    std::cout << e.what() << std::endl;
-  }
+  std::cout << vec.at(100) << std::endl;
 }
 
 void throw_execption_two() { throw std::runtime_error("marica"); }
